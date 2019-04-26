@@ -1,0 +1,54 @@
+#  query{
+#   events{
+# 		_id
+#   }
+# }
+
+# mutation{
+#   createEvent(eventInput: {title:"event6", description:"after refactoring", price:4.6, date:"Tue Apr 23 2019 17:58:00 GMT+0530 (India Standard Time)"}){
+#     title
+#     creater{
+#       email
+#       createdEvents{
+#         title
+#       }
+#     }
+#   }
+# }
+
+# mutation{
+#   bookEvent(eventId: "5cbff4e22185690b58fbb5c9"){
+#     _id
+#     createdAt
+#     updatedAt
+#     event {
+#       _id
+#       title
+#     }
+#   }
+# }
+
+#  query{
+#   bookings{
+# 		_id
+#   }
+# }
+
+# mutation{
+#   cancelBooking(bookingId:"5cbff5062185690b58fbb5ca"){
+#     _id
+#     title
+#     creater{
+#       email
+#     }
+#   }
+# }
+
+
+
+
+POST localhost:3007/graphql  
+
+{
+	"query": "query {login(email: \"naresh\", password:\"naresh\"){token}}"
+}
